@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Laravel\Fortify\Fortify;
 use Illuminate\Support\Facades\Route;
 use App\Actions\Fortify\CreateNewUser;
+use App\Actions\Fortify\CreateNewUser2;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Cache\RateLimiting\Limit;
 use App\Actions\Fortify\ResetUserPassword;
@@ -44,6 +45,9 @@ class FortifyServiceProvider extends ServiceProvider
         });
 
         $this->configureRoutes();
+
+        Fortify::registerView('auth.register2');
+        Fortify::createUsersUsing(CreateNewUser2::class);
     }
 
     /**
