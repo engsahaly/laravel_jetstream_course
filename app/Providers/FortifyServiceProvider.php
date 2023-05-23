@@ -68,6 +68,8 @@ class FortifyServiceProvider extends ServiceProvider
                 LoginLog::class,
             ]);
         });
+
+        Fortify::verifyEmailView('auth.verify-email2');
     }
 
     /**
