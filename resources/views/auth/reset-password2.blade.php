@@ -6,6 +6,8 @@
 
         <x-validation-errors class="mb-4" />
 
+        22222222222222
+
         <form method="POST" action="{{ route('password.update') }}">
             @csrf
 

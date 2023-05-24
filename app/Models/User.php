@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Notifications\MyResetPasswordNotification;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -19,6 +20,11 @@ class User extends Authenticatable implements MustVerifyEmail
     use HasTeams;
     use Notifiable;
     use TwoFactorAuthenticatable;
+
+    public function sendPasswordResetNotification($token): void
+    {
+        $this->notify(new MyResetPasswordNotification($token, $this->email));
+    }
 
     /**
      * The attributes that are mass assignable.

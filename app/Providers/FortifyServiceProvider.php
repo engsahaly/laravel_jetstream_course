@@ -13,6 +13,7 @@ use App\Actions\Fortify\LoginUser;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Cache\RateLimiting\Limit;
 use App\Actions\Fortify\ResetUserPassword;
+use App\Actions\Fortify\ResetUserPassword2;
 use App\Actions\Fortify\UpdateUserPassword;
 use Illuminate\Support\Facades\RateLimiter;
 use App\Actions\Fortify\UpdateUserProfileInformation;
@@ -70,6 +71,10 @@ class FortifyServiceProvider extends ServiceProvider
         });
 
         Fortify::verifyEmailView('auth.verify-email2');
+
+        Fortify::requestPasswordResetLinkView('auth.forgot-password2');
+        Fortify::resetPasswordView('auth.reset-password2');
+        Fortify::resetUserPasswordsUsing(ResetUserPassword2::class);
     }
 
     /**
