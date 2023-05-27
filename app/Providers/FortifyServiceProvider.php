@@ -82,7 +82,7 @@ class FortifyServiceProvider extends ServiceProvider
         Fortify::updateUserPasswordsUsing(UpdateUserPassword2::class);
 
         Fortify::confirmPasswordView('auth.confirm-password2');
-        Fortify::confirmPasswordsUsing();
+        // Fortify::confirmPasswordsUsing();
     }
 
     /**
