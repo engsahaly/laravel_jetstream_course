@@ -39,6 +39,8 @@ class JetstreamServiceProvider extends ServiceProvider
         Jetstream::deleteUsersUsing(DeleteUser::class);
 
         $this->configureRoutes();
+
+        // Jetstream::deleteUsersUsing();
     }
 
     /**
