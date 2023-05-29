@@ -15,5 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+    if ($request->user()->tokenCan('post:update')) {
+        return $request->user();
+    }
+
+    abort(401);
 });
