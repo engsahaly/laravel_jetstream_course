@@ -1,6 +1,6 @@
 <x-form-section submit="createTeam">
     <x-slot name="title">
-        {{ __('Team Details') }}
+        {{ __('Team Details 2222222') }}
     </x-slot>
 
     <x-slot name="description">
@@ -12,7 +12,8 @@
             <x-label value="{{ __('Team Owner') }}" />
 
             <div class="flex items-center mt-2">
-                <img class="w-12 h-12 rounded-full object-cover" src="{{ $this->user->profile_photo_url }}" alt="{{ $this->user->name }}">
+                <img class="w-12 h-12 rounded-full object-cover" src="{{ $this->user->profile_photo_url }}"
+                    alt="{{ $this->user->name }}">
 
                 <div class="ml-4 leading-tight">
                     <div class="text-gray-900">{{ $this->user->name }}</div>
