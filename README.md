@@ -1,6 +1,6 @@
 ## Laravel Jetstream & Fortify - The Complete Guide (Course Files)
 
-<img src="https://img-b.udemycdn.com/course/750x422/5361088_3d75.jpg">
+<img src="https://img-c.udemycdn.com/course/750x422/5361088_3d75.jpg">
 
 **Created By :** Mahmoud Anwar
 **Email :** Engsahaly@gmail.com
